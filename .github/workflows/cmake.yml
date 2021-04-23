@@ -32,9 +32,9 @@ jobs:
         force: false # optional, default is false
         # Add toolchain to the path
         add-to-path: true # optional, default is true
-    - name: echo info
+    - name: list toolchain
       shell: bash
-      run: echo "NDK path:${NDK}" && ls $NDK
+      run: ls toolchain
 
 #     - name: Create Build Environment
 #       # Some projects don't allow in-source building, so create a separate build directory
