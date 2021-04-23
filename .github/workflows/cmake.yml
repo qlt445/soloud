@@ -25,7 +25,7 @@ jobs:
         # Android API
         api: 17 # default is 21
         # Platform arch
-        arch: linux
+        arch: x86_64
         # Path to use for NDK toolchain
         install-location: /android-toolchain
         # Force install toolchain
