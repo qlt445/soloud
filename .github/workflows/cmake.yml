@@ -23,7 +23,7 @@ jobs:
       uses: ravinderjangra/android-ndk-toolchain-setup@0.2
       with:
         # Android API
-        api: 17 # default is 21
+        api: 21 # default is 21
         # Platform arch
         arch: x86_64
         # Path to use for NDK toolchain
