@@ -27,9 +27,9 @@ jobs:
         # Platform arch
         arch: x86_64
         # Path to use for NDK toolchain
-        install-location: /android-toolchain
+        install-location: ndk
         # Force install toolchain
-        force: false # optional, default is false
+        force: true # optional, default is false
         # Add toolchain to the path
         add-to-path: true # optional, default is true
 
@@ -46,7 +46,7 @@ jobs:
       # Note the current convention is to use the -S and -B options here to specify source 
       # and build directories, but this is only available with CMake 3.13 and higher.  
       # The CMake binaries on the Github Actions machines are (as of this writing) 3.12
-      run: cmake $GITHUB_WORKSPACE -DCMAKE_BUILD_TYPE=$BUILD_TYPE -DCMAKE_TOOLCHAIN_FILE=/android-toolchain -DANDROID_ABI=armeabi-v7a -DANDROID_TOOLCHAIN=clang -DANDROID_PLATFORM=android-17
+      run: cmake $GITHUB_WORKSPACE -DCMAKE_BUILD_TYPE=$BUILD_TYPE -DCMAKE_TOOLCHAIN_FILE=ndk -DANDROID_ABI=armeabi-v7a -DANDROID_TOOLCHAIN=clang -DANDROID_PLATFORM=android-17
 
     - name: Build
       working-directory: ${{github.workspace}}/build
